@@ -26,6 +26,31 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         
+        /* Estilos para el nuevo botón solicitado hacia Avisos AEMET */
+        .forward-btn-container {
+            text-align: right;
+            margin-top: 30px;
+            margin-bottom: 5px;
+        }
+        .forward-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #34495e;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: background 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .forward-btn:hover {
+            background-color: #2c3e50;
+        }
+        
         .header-wrapper {
             display: flex;
             justify-content: space-between;
@@ -142,7 +167,7 @@
             100% { background-color: #ffebee; box-shadow: inset 0 0 5px rgba(198,40,40,0.1); }
         }
         .footer {
-            margin-top: 35px;
+            margin-top: 15px;
             text-align: center;
             font-size: 11px;
             color: #95a5a6;
@@ -172,11 +197,11 @@
         </div>
         
         <div class="meta-info">
-            <strong>Informe generado de forma automática:</strong> 22/06/2026 a las 14:00:34 | <strong>Ámbito:</strong> Comunidad Autónoma de las Islas Baleares
+            <strong>Informe generado de forma automática:</strong> 22/06/2026 a las 14:53:10 | <strong>Ámbito:</strong> Comunidad Autónoma de las Islas Baleares
         </div>
         
         <div class="prl-alert">
-            <strong>⚠️ Recordatorio Legal Obligatorio (Real Decreto-ley 4/2023):</strong> En la fase activa del Plan Nacional (16 de mayo al 15 de septiembre), ante la presencia de alertas meteorológicas de nivel <strong>Naranja (Riesgo medio)</strong> o <strong>Rojo (Riesgo alto)</strong>, las empresas deben implementar obligatoriamente las medidas de prevención estipuladas en su evaluación de riesgos. Esto incluye la adaptación de condiciones, reducción o redistribución horaria e incluso la prohibición de desarrollar tareas de alta exigencia física al aire libre si la salud del personal se ve amenazada.
+            <strong>⚠️ Recordatorio Legal Obligatorio (Real Decreto-ley 4/2023):</strong> En la fase activa del Plan Nacional (16 de mayo al 15 de septiembre), ante la presencia de alertas meteorológicas de nivel <strong>Naranja (Riesgo medio)</strong> o <strong>Rojo (Riesgo alto)</strong>, las empresas deben implementar obligatoriamente las medidas de prevención estipuladas en su evaluación de riesgos. Esto incluye la adaptación de condiciones, reduction o redistribución horaria e incluso la prohibición de desarrollar tareas de alta exigencia física al aire libre si la salud del personal se ve amenazada.
         </div>
         
         <table>
@@ -192,6 +217,10 @@
                 <tr><td><strong>Ibiza y Formentera</strong></td><td class="risk-none">🟢 Ausencia de riesgo</td><td class="risk-none">🟢 Ausencia de riesgo</td><td class="risk-none">🟢 Ausencia de riesgo</td></tr><tr><td><strong>Sur de Mallorca</strong></td><td class="risk-low">🟡 Bajo riesgo</td><td class="risk-none">🟢 Ausencia de riesgo</td><td class="risk-none">🟢 Ausencia de riesgo</td></tr><tr><td><strong>Serra de Tramuntana</strong></td><td class="risk-none">🟢 Ausencia de riesgo</td><td class="risk-none">🟢 Ausencia de riesgo</td><td class="risk-none">🟢 Ausencia de riesgo</td></tr><tr><td><strong>Interior de Mallorca</strong></td><td class="risk-medium">🟠 Riesgo medio</td><td class="risk-low">🟡 Bajo riesgo</td><td class="risk-low">🟡 Bajo riesgo</td></tr><tr><td><strong>Levante mallorquín</strong></td><td class="risk-none">🟢 Ausencia de riesgo</td><td class="risk-none">🟢 Ausencia de riesgo</td><td class="risk-none">🟢 Ausencia de riesgo</td></tr><tr><td><strong>Norte y nordeste de Mallorca</strong></td><td class="risk-low">🟡 Bajo riesgo</td><td class="risk-low">🟡 Bajo riesgo</td><td class="risk-none">🟢 Ausencia de riesgo</td></tr><tr><td><strong>Menorca</strong></td><td class="risk-low">🟡 Bajo riesgo</td><td class="risk-low">🟡 Bajo riesgo</td><td class="risk-none">🟢 Ausencia de riesgo</td></tr>
             </tbody>
         </table>
+        
+        <div class="forward-btn-container">
+            <a class="forward-btn" href="Previsiones_AEMET_horarias.html">Avisos AEMET →</a>
+        </div>
         
         <div class="footer">
             Extracción de datos automatizada localmente. Fuente de Datos: Ministerio de Sanidad - Gobierno de España.<br>
