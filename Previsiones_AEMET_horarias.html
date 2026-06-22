@@ -38,12 +38,12 @@
         
         /* ============================================================
            🖥️ CONFIGURACIÓN POR DEFECTO: ORDENADOR / PANTALLA GRANDE
-           (Ancho 100% libre y adaptado proporcionalmente al marco general)
+           (Ancho libre adaptado pero con estructura FIXED para forzar alineación)
            ============================================================ */
         .table-responsive { overflow-x: auto; margin-bottom: 20px; border: 1px solid #e0e0e0; border-radius: 4px; }
         
         table { 
-            table-layout: auto; 
+            table-layout: fixed; 
             width: 100%; 
             border-collapse: collapse; 
         }
@@ -57,9 +57,9 @@
         }
         th { background-color: #f8f9fa; color: #666; font-weight: 600; }
         
-        /* Proporciones elegantes para escritorio (Comentarios toma el espacio libre dominante) */
+        /* Fijamos anchos idénticos en ordenador para alinear perfectamente las horas en vertical */
         th:nth-child(1), td:nth-child(1) { text-align: left; padding-left: 12px; background-color: #ffffff; width: 170px; }
-        th:nth-child(2), td:nth-child(2) { text-align: left; padding-left: 12px; padding-right: 12px; background-color: #ffffff; color: #4e5a65; line-height: 1.4; }
+        th:nth-child(2), td:nth-child(2) { text-align: left; padding-left: 12px; padding-right: 12px; background-color: #ffffff; color: #4e5a65; line-height: 1.4; width: 380px; }
         
         td:nth-child(1), td:nth-child(2) { background-color: #ffffff !important; }
 
@@ -71,7 +71,7 @@
         
         /* ============================================================
            📱 MEDIOS SENSITIVOS: DISPOSITIVOS MÓVILES (Ancho < 1200px)
-           (Cambio a renderizado rígido anti-temblores con anchos exactos)
+           (Congelación estricta de píxeles y scroll fluido anti-temblores)
            ============================================================ */
         @media (max-width: 1200px) {
             table { 
@@ -97,10 +97,10 @@
             }
             th:nth-child(1) { background-color: #f1f2f6; z-index: 5; color: #2c3e50; }
 
-            /* 2ª Columna: Comentarios (Fijada estricta a 135px -> ¡Aumentada en 10px!) */
+            /* 2ª Columna: Comentarios (Fijada estricta a 135px) */
             th:nth-child(2), td:nth-child(2) {
                 position: sticky; 
-                left: 125px; /* Empieza exactamente donde acaba la primera */
+                left: 125px; 
                 width: 135px; 
                 min-width: 135px; 
                 max-width: 135px;
@@ -161,7 +161,7 @@
         </div>
         
         <footer>
-            <p>Extracción de datos automatizada localmente. Generado el 22/06/2026 a las 16:17:06.<br>
+            <p>Extracción de datos automatizada localmente. Generado el 22/06/2026 a las 16:21:36.<br>
             Fuente de Datos: Agencia Estatal de Meteorología - Gobierno de España.<br>
             Dirección de la fuente original: <a href="https://www.aemet.es/es/eltiempo/prediccion/avisos?k=bal&p=&l=" target="_blank">https://www.aemet.es/es/eltiempo/prediccion/avisos?k=bal&p=&l=</a></p>
         </footer>
