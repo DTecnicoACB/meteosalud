@@ -57,17 +57,20 @@
             top: 0;
         }
 
-
+/* El valor que se da corresponde al brillo y contraste */
+/* valores originales:   brightness(1.05) contrast(1.1)   */
         .mapa-aemet-custom img.leaflet-tile {
             position: absolute;
             max-width: none !important;
             max-height: none !important;
-            filter: brightness(1.05) contrast(1.1); /* Contraste recuperado de la inyección JS */
+            filter: brightness(2.05) contrast(1.1); /* Contraste recuperado de la inyección JS */
         }
 
         /* 📌 FUSIÓN: Solución DEFINITIVA a los bordes gruesos. Esta regla antes se perdía al extraer. */
+
+/* El valor que se da corresponde al grosor de las líneas de separación de las comarcas y provincias */
         .mapa-aemet-custom .leaflet-interactive { 
-            stroke-width: 1.3px !important; 
+            stroke-width: 0.2px !important; 
         }
 
         /* Watermark logo AEMET */
@@ -145,7 +148,7 @@
             <a class="back-btn" href="Previsiones_Meteosalud.html">← Volver a Previsiones Meteosalud</a>
         </div>
         <footer>
-            <p>Extracción de mapas automatizada mediante bot local. Generado el 16/07/2026 a las 12:31:30.<br>
+            <p>Extracción de mapas automatizada mediante bot local. Generado el 16/07/2026 a las 12:35:48.<br>
             Fuente de Datos: Agencia Estatal de Meteorología - Gobierno de España.</p>
         </footer>
     </div>
