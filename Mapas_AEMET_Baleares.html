@@ -10,17 +10,7 @@
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 20px; }
         .container { max-width: 1550px; margin: 0 auto; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.06); }
         
-        /* 📌 FILA FLEXIBLE PARA ALINEAR BOTONES EXTREMOS (IZQUIERDA Y DERECHA) */
-        .btn-row { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            width: 100%; 
-        }
-        .btn-row.top { margin-bottom: 20px; }
-        .btn-row.bottom { margin-top: 30px; margin-bottom: 5px; }
-        
-        /* Botones de navegación */
+        /* Botones de navegación (Estética idéntica a Horarias) */
         .back-btn { 
             display: inline-flex; 
             align-items: center; 
@@ -38,11 +28,15 @@
         }
         .back-btn:hover { background-color: #2c3e50; }
         
-        /* 📌 ESTILO PARA LAS FLECHAS DE LOS BOTONES (MÁS GRANDES Y NEGRITAS) */
-        .btn-arrow {
-            font-size: 18px;
-            font-weight: bold;
-            line-height: 1;
+        /* Contenedores de botones (Ubicación agrupada idéntica a Horarias) */
+        .back-btn-container, .btn-row { 
+            display: flex; 
+            gap: 10px; 
+            margin-bottom: 20px; 
+        }
+        .back-btn-container.bottom, .btn-row.bottom { 
+            margin-top: 30px; 
+            margin-bottom: 5px; 
         }
         
         .header-wrapper { display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #34495e; padding-bottom: 15px; margin-bottom: 5px; gap: 20px; }
@@ -193,8 +187,8 @@
         </div>
         
         <footer>
-            <p>Extracción de mapas automatizada mediante bot local. Generado el 16/07/2026 a las 14:09:43.<br>
-            Fuente de Datos: Agencia Estatal de Meteorología - Gobierno de España.
+            <p>Extracción de mapas automatizada mediante bot local. Generado el 16/07/2026 a las 14:13:00.<br>
+            Fuente de Datos: Agencia Estatal de Meteorología - Gobierno de España.<br>
             Dirección de la fuente original: <a href="https://www.aemet.es/es/eltiempo/prediccion/avisos?k=bal&p=&l=" target="_blank">https://www.aemet.es/es/eltiempo/prediccion/avisos?k=bal&p=&l=</a></p>
         </footer>
     </div>
