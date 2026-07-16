@@ -35,7 +35,6 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             background: #ffffff;
-            padding: 20px;    /* Recuperat  */
         }
 
         .mapa-aemet-custom { 
@@ -47,17 +46,6 @@
             position: relative;
 
         }
-
-
-/* SUBSTITUIM TOT AIXO 
-
-* * * * * * * 
- * * * * * *
-  * * * * *
-   * * * * 
-    * * *
-     * *
-      *
 
         /* 📌 FUSIÓN: Posicionamiento absoluto para respetar las capas gráficas extraídas (Solución a artefactos gráficos) */
         .mapa-aemet-custom .leaflet-pane, 
@@ -111,64 +99,6 @@
         .mapa-aemet-custom svg.leaflet-zoom-animated { 
             mix-blend-mode: multiply; 
         }
-
-
-       *
-      * *
-     * * *
-    * * * *
-   * * * * *
-  * * * * * *
-
-Per aixo:  */
-
-        /* 📌 SOLUCIÓN CSS DEFINITIVA PARA LEAFLET */
-        #mapa {
-            position: relative;
-            width: 760px;
-            height: 550px;
-            background-color: #b3d1ff !important; /* Fondo azul mar */
-            overflow: hidden;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        /* Obligamos a los paneles internos a posicionarse de forma absoluta para respetar los translate3d */
-        .leaflet-pane, .leaflet-layer, .leaflet-tile-container, svg {
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        img.leaflet-tile {
-            position: absolute;
-            max-width: none !important;
-            max-height: none !important;
-        }
-
-        /* 🎯 ANIQUILACIÓN DE PUNTOS NEGROS */
-        .leaflet-marker-pane {
-            display: none !important;
-        }
-
-        /* Ajustes estéticos para el SVG de los mapas de alerta */
-        svg.leaflet-zoom-animated {
-            mix-blend-mode: multiply;
-        }
-
-
-
-
-
-
-
-
-
-
-/* FINS AQUI */
-
-
-
         
         .error-msg { color: red; font-weight: bold; padding: 20px; text-align: center; border: 1px solid red; border-radius: 5px; background-color: #ffe6e6; }
         footer { margin-top: 30px; padding-top: 15px; border-top: 1px solid #e0e0e0; font-size: 11px; color: #7f8c8d; text-align: center; line-height: 1.6; }
@@ -218,7 +148,7 @@ Per aixo:  */
             <a class="back-btn" href="Previsiones_Meteosalud.html">← Volver a Previsiones Meteosalud</a>
         </div>
         <footer>
-            <p>Extracción de mapas automatizada mediante bot local. Generado el 16/07/2026 a las 12:49:33.<br>
+            <p>Extracción de mapas automatizada mediante bot local. Generado el 16/07/2026 a las 12:50:49.<br>
             Fuente de Datos: Agencia Estatal de Meteorología - Gobierno de España.</p>
         </footer>
     </div>
