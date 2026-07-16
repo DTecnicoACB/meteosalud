@@ -26,13 +26,8 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         
-        /* Estilos para el nuevo botón solicitado hacia Avisos AEMET */
-        .forward-btn-container {
-            text-align: right;
-            margin-top: 30px;
-            margin-bottom: 5px;
-        }
-        .forward-btn {
+        /* Botones */
+        .back-btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -47,8 +42,17 @@
             border: none;
             cursor: pointer;
         }
-        .forward-btn:hover {
+        .back-btn:hover {
             background-color: #2c3e50;
+        }
+        .btn-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .btn-row.bottom {
+            margin-top: 30px;
+            margin-bottom: 5px;
         }
         
         .header-wrapper {
@@ -188,6 +192,12 @@
 <body>
     <div class="container">
         
+        <!-- 📌 FILA DE BOTONES SUPERIOR -->
+        <div class="btn-row top">
+            <a class="back-btn" href="Mapas_AEMET_Baleares.html">Mapas AEMET</a>
+            <a class="back-btn" href="Previsiones_AEMET_horarias.html">Franjas Horarias AEMET</a>
+        </div>
+
         <div class="header-wrapper">
             <div class="header-text">
                 <h1>Mapa de niveles de riesgo para la salud de METEOSALUD:</h1>
@@ -197,7 +207,7 @@
         </div>
         
         <div class="meta-info">
-            <strong>Informe generado de forma automática:</strong> 16/07/2026 a las 13:57:54 | <strong>Ámbito:</strong> Comunidad Autónoma de las Islas Baleares
+            <strong>Informe generado de forma automática:</strong> 16/07/2026 a las 14:05:34 | <strong>Ámbito:</strong> Comunidad Autónoma de las Islas Baleares
         </div>
         
         <div class="prl-alert">
@@ -223,10 +233,7 @@
             <a class="back-btn" href="Mapas_AEMET_Baleares.html">Mapas AEMET</a>
             <a class="back-btn" href="Previsiones_AEMET_horarias.html">Franjas Horarias AEMET</a>
         </div>
-        <div class="btn-row bottom">
-            <a class="back-btn" href="Mapas_AEMET_Baleares.html">Mapas AEMET</a>
-            <a class="back-btn" href="Previsiones_Meteosalud.html">Previsiones METEOSALUD</a>
-        </div>
+
 
         
         <div class="footer">
