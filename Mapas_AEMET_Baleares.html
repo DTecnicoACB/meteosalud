@@ -26,7 +26,7 @@
         
         .map-scroll-container { width: 100%; display: flex; justify-content: center; padding-bottom: 15px; }
         
-        /* Estilos clave para ZOOM y OCULTAR botones */
+        /* 📌 FUSIÓN: Estilos clave para ZOOM y LIMPIEZA del mapa base */
         .map-wrapper { 
             width: 500px; height: 300px;
             overflow: hidden;
@@ -34,6 +34,7 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            background: #ffffff;
         }
 
         .mapa-aemet-custom { 
@@ -41,6 +42,30 @@
             transform: scale(1.4) translate(-165px, -120px);
             transform-origin: 50% 50%;
             margin-top: 50px;
+            background-color: #b3d1ff !important; /* Fondo azul mar recuperado */
+            position: relative;
+        }
+
+        /* 📌 FUSIÓN: Posicionamiento absoluto para respetar las capas gráficas extraídas (Solución a artefactos gráficos) */
+        .mapa-aemet-custom .leaflet-pane, 
+        .mapa-aemet-custom .leaflet-layer, 
+        .mapa-aemet-custom .leaflet-tile-container, 
+        .mapa-aemet-custom svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .mapa-aemet-custom img.leaflet-tile {
+            position: absolute;
+            max-width: none !important;
+            max-height: none !important;
+            filter: brightness(1.05) contrast(1.1); /* Contraste recuperado de la inyección JS */
+        }
+
+        /* 📌 FUSIÓN: Solución DEFINITIVA a los bordes gruesos. Esta regla antes se perdía al extraer. */
+        .mapa-aemet-custom .leaflet-interactive { 
+            stroke-width: 0.3px !important; 
         }
 
         /* Watermark logo AEMET */
@@ -59,12 +84,16 @@
             pointer-events: none;
         }
 
-        /* Ocultar botones de zoom y marcadores negros */
-        .leaflet-control-zoom { display: none !important; }
-        .leaflet-marker-pane { display: none !important; }
-        .panel-control { display: none !important; }
+        /* 🎯 FUSIÓN: Ocultar botones de zoom, marcadores negros y paneles innecesarios */
+        .leaflet-control-zoom,
+        .leaflet-marker-pane,
+        .panel-control { 
+            display: none !important; 
+        }
         
-        .mapa-aemet-custom svg.leaflet-zoom-animated { mix-blend-mode: multiply; }
+        .mapa-aemet-custom svg.leaflet-zoom-animated { 
+            mix-blend-mode: multiply; 
+        }
         
         .error-msg { color: red; font-weight: bold; padding: 20px; text-align: center; border: 1px solid red; border-radius: 5px; background-color: #ffe6e6; }
         footer { margin-top: 30px; padding-top: 15px; border-top: 1px solid #e0e0e0; font-size: 11px; color: #7f8c8d; text-align: center; line-height: 1.6; }
@@ -114,7 +143,7 @@
             <a class="back-btn" href="Previsiones_Meteosalud.html">← Volver a Previsiones Meteosalud</a>
         </div>
         <footer>
-            <p>Extracción de mapas automatizada mediante bot local. Generado el 16/07/2026 a las 10:40:33.<br>
+            <p>Extracción de mapas automatizada mediante bot local. Generado el 16/07/2026 a las 10:58:48.<br>
             Fuente de Datos: Agencia Estatal de Meteorología - Gobierno de España.</p>
         </footer>
     </div>
